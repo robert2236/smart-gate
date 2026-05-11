@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-Gate: Acceso Biométrico</title>
+    <meta name="description" content="Simulador de acceso mediante reconocimiento facial">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 style="display:none;">Control de Acceso Smart-Gate</h1>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Cámara en vivo" id="video-stream">
+            <div class="overlay-status" id="overlay-status">
+                <div class="icon" id="status-icon"></div>
+                <h2 id="status-text">Escaneando Rostro...</h2>
+                <p id="status-name"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
